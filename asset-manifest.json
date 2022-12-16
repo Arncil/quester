@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/quester/static/css/main.6ce89dff.css",
-    "main.js": "/quester/static/js/main.a2bf4ed2.js",
+    "main.css": "/quester/static/css/main.6c6b6a5f.css",
+    "main.js": "/quester/static/js/main.22a58692.js",
     "static/media/Quicksand-VariableFont_wght.ttf": "/quester/static/media/Quicksand-VariableFont_wght.cf52df73d8529b4815ed.ttf",
     "index.html": "/quester/index.html",
-    "main.6ce89dff.css.map": "/quester/static/css/main.6ce89dff.css.map",
-    "main.a2bf4ed2.js.map": "/quester/static/js/main.a2bf4ed2.js.map"
+    "main.6c6b6a5f.css.map": "/quester/static/css/main.6c6b6a5f.css.map",
+    "main.22a58692.js.map": "/quester/static/js/main.22a58692.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ce89dff.css",
-    "static/js/main.a2bf4ed2.js"
+    "static/css/main.6c6b6a5f.css",
+    "static/js/main.22a58692.js"
   ]
 }
