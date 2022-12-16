@@ -3,16 +3,18 @@
   flex-direction: column;
   justify-items: center;
   color: #fff;
-  width: 40vw;
+  min-width: 40vw;
   min-height: 80vh;
   border: 0.3vmin solid #fff;
   border-radius: 3vmin;
   padding: 2vmin;
   background-color: hsla(0, 0%, 0%, 0.2);
 }
+
 h1 {
   font-size: 6vmin;
 }
+
 button {
   min-width: 20vmin;
   height: 5vmin;
@@ -20,7 +22,6 @@ button {
   border: 0.3vmin solid #000;
   color: #000;
   background: linear-gradient(180deg, hsl(0, 0%, 90%), hsl(0, 0%, 25%));
-  font-weight: 700;
   font-size: 2.5vmin;
   transition: all 0.5s;
   cursor: pointer;

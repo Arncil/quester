@@ -1,10 +1,12 @@
 import './Quests.css'
 import { useState } from 'react'
+import AddQuest from '../AddQuest/AddQuest'
+import AddQuestButton from '../AddQuestButton/AddQuestButton'
+import MoreOptions from '../MoreOptions/MoreOptions'
 
 export default function Quests() {
   const [newQuestClicked, setNewQuestClicked] = useState(false)
   const [newQuest, setNewQuest] = useState('')
-  const [isSortActive, setIsSortAcitive] = useState(false)
   const [sortOption, setSortOption] = useState('All')
   const [quests, setQuests] = useState([
     {
@@ -80,19 +82,6 @@ export default function Quests() {
     setNewQuestClicked(false)
   }
 
-  const addQuestButton =
-    <button onClick={() => setNewQuestClicked(!newQuestClicked)}>
-      {newQuestClicked ? 'Cancel' : 'Add Quest'}
-    </button>
-
-  const addQuestForm =
-    newQuestClicked ?
-      <li style={{ backgroundColor: 'transparent' }}>
-        <form onSubmit={onSubmit}>
-          <input type='text' placeholder='Add quest' onChange={(e) => setNewQuest(e.target.value)} />
-          <button type='submit'>Add Quest</button>
-        </form>
-      </li> : null
 
   let listOfQuests
   if (sortOption === 'All') {
@@ -142,43 +131,26 @@ export default function Quests() {
       })
   }
 
-  const sortOptionsButton =
-    isSortActive ?
-      <footer>
-        <button
-          onClick={() => setSortOption('All')}
-          style={sortOption !== 'All' ? { opacity: 0.5 } : {}}
-        >All</button>
-        <button
-          onClick={() => setSortOption('In Progress')}
-          style={sortOption !== 'In Progress' ? { opacity: 0.5 } : {}}
-        >In Progress</button>
-        <button
-          onClick={() => setSortOption('Checked')}
-          style={sortOption !== 'Checked' ? { opacity: 0.5 } : {}}
-        >Checked</button>
-      </footer> : null
-
-  const moreOptions =
-    <footer>
-      <button onClick={finnishAllQuests}>✔️ All Quests</button>
-      <button onClick={() => setIsSortAcitive(!isSortActive)}>
-        {isSortActive ? 'Hide Sort' : 'Show Sort'}
-      </button>
-      <button onClick={deleteAllQuests}>✖️ All Quests</button>
-    </footer>
 
   return (
     <div className='Quests'>
       <nav>
-        {addQuestButton}
+        <AddQuestButton
+          newQuestClicked={newQuestClicked}
+          setNewQuestClicked={setNewQuestClicked} />
       </nav>
       <ul>
-        {addQuestForm}
+        <AddQuest
+          newQuestClicked={newQuestClicked}
+          setNewQuest={setNewQuest}
+          onSubmit={onSubmit} />
         {listOfQuests}
       </ul>
-      {sortOptionsButton}
-      {moreOptions}
+      <MoreOptions
+        finnishAllQuests={finnishAllQuests}
+        deleteAllQuests={deleteAllQuests}
+        sortOption={sortOption}
+        setSortOption={setSortOption} />
     </div>
   )
 }

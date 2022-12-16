@@ -1,7 +1,6 @@
 .Quests {
     width: 100%;
     display: grid;
-    place-items: space-between;
     gap: 1vmin
 }
 
@@ -14,6 +13,7 @@
 .Quests ul {
     width: 100%;
     min-height: 55vh;
+    padding: 0;
 }
 
 .Quests li {
@@ -62,3 +62,9 @@
     justify-content: space-around;
     width: 100%;
 }
+
+@media (max-width: 1000px) {
+    .Quests ul {
+        min-height: 65vh;
+    }
+  }
