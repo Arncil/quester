@@ -1,0 +1,64 @@
+.Quests {
+    width: 100%;
+    display: grid;
+    place-items: space-between;
+    gap: 1vmin
+}
+
+.Quests nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.Quests ul {
+    width: 100%;
+    min-height: 55vh;
+}
+
+.Quests li {
+    font-size: 3vmin;
+    line-height: 5vmin;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    width: 100%;
+    margin-bottom: 1vmin;
+    text-indent: 1vmin;
+    position: relative;
+    white-space: initial;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Quests span {
+    width: 90%;
+    word-break: break-all;
+}
+
+.Quests li div {
+    position: absolute;
+    top: 0;
+    right: 1vmin;
+    cursor: pointer;
+    font-size: 2vmin;
+    display: flex;
+}
+
+.Quests form {
+    width: 100%;
+    display: flex;
+}
+
+.Quests input {
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    border: 0.3vmin solid #fff;
+    font-size: 3vmin;
+    margin-right: 1vmin;
+    color: #fff;
+}
+
+.Quests footer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}

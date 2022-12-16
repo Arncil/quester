@@ -1,0 +1,40 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  color: #fff;
+  width: 40vw;
+  min-height: 80vh;
+  border: 0.3vmin solid #fff;
+  border-radius: 3vmin;
+  padding: 2vmin;
+  background-color: hsla(0, 0%, 0%, 0.2);
+}
+h1 {
+  font-size: 6vmin;
+}
+button {
+  min-width: 20vmin;
+  height: 5vmin;
+  border-radius: 1vmin;
+  border: 0.3vmin solid #000;
+  color: #000;
+  background: linear-gradient(180deg, hsl(0, 0%, 90%), hsl(0, 0%, 25%));
+  font-weight: 700;
+  font-size: 2.5vmin;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(180deg, hsl(0, 0%, 50%), hsl(0, 0%, 5%));
+  color: #fff;
+  border-color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .App {
+    width: 80vw;
+  }
+}
